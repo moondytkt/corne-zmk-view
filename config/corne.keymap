@@ -128,11 +128,11 @@
             bindings = <&mo 2>;
                      };
 
-       combo_SYNMBPDright{
+       combo_mediaright{
             timeout-ms = <50>;
             key-positions = <21 22>;
             layers = <0 1>;
-            bindings = <&mo 2>;
+            bindings = <&mo 3>;
                      };
 
         combo_SPTLGTmac {
