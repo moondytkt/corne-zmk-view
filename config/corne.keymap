@@ -207,14 +207,14 @@ base_layer {
             label = "BASE";
 
             // _____________________________________   _____________________________________
-            // |LALT |Q (1)|W (2)|E (3)|R (4)|T (5)|   |Y (6)|U (7)|I (8)|O (9)|P (0)|MEGA |
-            // |LCMD |  A  |S (s)|  D  |F (f)|  G  |   |  H  |  J  |K (u)|  L  |' (;)|LACTL|
-            // |LCTRL|  Z  |  X  |  C  |  V  |  B  |   |  N  |M (l)|, (d)|. (r)|/ (\)|ShCmd|
+            // |LALT |Q (1)|W (2)|E (3)|R (4)|T (5)|   |Y (6)|U (7)|I (8)|O (9)|P (0)|MEGA`|
+            // |LCMD |  A  |S (s)|  D  |F (f)|  G  |   |  H  |  J  |K (u)|  L  |' (;)| meh |
+            // |LCTRL|  Z  |  X  |  C  |  V  |  B  |   |  N  |M (l)|, (d)|. (r)|/ (\)|LSCMD|
             //                   | ESC |SPACE|BSPC |   | ENT | TAB | DEL |
             //                                               
             
             bindings = <
-  &kp LALT   &mt N1 Q  &mt N2 W         &mt N3 E  &mt  N4 R    &mt N5 T        &mt N6 Y   &mt N7 U      &mt N8 I        &mt N9 O       &mt N0 P       &kp LA(LG(LCTRL))
+  &kp LALT   &mt N1 Q  &mt N2 W         &mt N3 E  &mt  N4 R    &mt N5 T        &mt N6 Y   &mt N7 U      &mt N8 I        &mt N9 O       &mt N0 P       &mt LA(LG(LCTRL)) GRAVE  
   &kp LCMD   &kp A     &mt LC(LA(S)) S  &kp D     &mt LG(F) F  &kp G           &kp H      &kp J         &mt UP K        &kp L          &mt SEMI SQT   &kp LA(LCTRL)
   &kp LCTRL  &kp Z     &kp X            &kp C     &kp V        &kp B           &kp N      &mt LEFT M    &mt DOWN COMMA  &mt RIGHT DOT  &mt BSLH FSLH  &kp LS(LCMD)
                                         &kp ESC  &kp SPACE    &kp BSPC         &kp ENTER  &kp TAB  &kp DEL
@@ -225,8 +225,8 @@ win_layer {
             label = "WIN";
 
             // _____________________________________   _____________________________________
-            // |LALT |Q (1)|W (2)|E (3)|R (4)|T (5)|   |Y (6)|U (7)|I (8)|O (9)|P (0)|MEGA |
-            // |LCTRL|  A  |  S  |  D  |F (f)|  G  |   |  H  |  J  |K (u)|  L  |' (;)|LACTL|
+            // |LALT |Q (1)|W (2)|E (3)|R (4)|T (5)|   |Y (6)|U (7)|I (8)|O (9)|P (0)|MEGA`|
+            // |LCTRL|  A  |  S  |  D  |F (f)|  G  |   |  H  |  J  |K (u)|  L  |' (;)| meh |
             // |LCMD |  Z  |  X  |  C  |  V  |  B  |   |  N  |M (l)|, (d)|. (r)|/ (\)|ShCtl|
             //                   | ESC |SPACE|BSPC |   | ENT | TAB | DEL |
             //                                               
