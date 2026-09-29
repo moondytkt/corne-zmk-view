@@ -7,7 +7,7 @@
 
 // Layers
 #define BASE 0
-#define WIN 1
+#define LNX 1
 #define symnumpad 2
 #define media 3
 #define sttg 4
@@ -66,6 +66,13 @@
             bindings = <&kp RSHFT>;
                      };
 
+        combo_WHISPERFLOW {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            layers = <0 1>;
+            bindings = <&kp LA(LC(Z))>;
+                     };
+
 //LEFT MAC Combinations
 
         combo_WIN {
@@ -107,7 +114,7 @@
 
 
 
-//LEFT WIN Combinations
+//LEFT LNX Combinations
 
         combo_TSKMNGRwin {
             timeout-ms = <50>;
@@ -140,13 +147,6 @@
             bindings = <&mo 3>;
                      };
 
-        combo_SPTLGTmac {
-            timeout-ms = <50>;
-            key-positions = <6 7>;
-            layers = <0>;
-            bindings = <&kp RG(RS(S))>;
-                     };
-
         combo_FINDmac {
             timeout-ms = <50>;
             key-positions = <18 19>;
@@ -163,21 +163,7 @@
 
 
 
-//RIGHT WIN Combinations
-
-        combo_SEARCHwin {
-            timeout-ms = <50>;
-            key-positions = <6 7>;
-            layers = <1>;
-            bindings = <&kp RG(RS(S))>;
-                     };
-
-        combo_WHSPRFLWwin {
-            timeout-ms = <50>;
-            key-positions = <18 19>;
-            layers = <1>;
-            bindings = <&kp RC(SQT)>;
-                     };
+//RIGHT LNX Combinations
 
         combo_TODOSwin {
             timeout-ms = <50>;
@@ -222,7 +208,7 @@ base_layer {
         };
 
 win_layer {
-            label = "WIN";
+            label = "LNX";
 
             // _____________________________________   _____________________________________
             // |LALT |Q (1)|W (2)|E (3)|R (4)|T (5)|   |Y (6)|U (7)|I (8)|O (9)|P (0)|MEGA`|
@@ -243,8 +229,8 @@ symnumpad_layer {
             label = "NMBPD";
 
             // _____________________________________   _____________________________________
-            // |     |  \  |  `  |  {  |  }  |  -  |   |  :  |  7  |  8  |  9  |     |     |
-            // |     |  |  |  '  |  (  |  )  |  *  |   |  ;  |  4  |  5  |  6  |     |     |
+            // |     |  \  |  `  |  {  |  }  |  -  |   |  :  |  7  |  8  |  9  |  -  |  +  |
+            // |     |  |  |  '  |  (  |  )  |  *  |   |  ;  |  4  |  5  |  6  |  *  |  =  |
             // |LSHFT|  /  |  "  |  [  |  ]  |  =  |   |  0  |  1  |  2  |  3  |     |RSHFT|
             //                   |  <  |  >  |     |   |Shift|     |     |
             //                                 
