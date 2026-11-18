@@ -33,7 +33,6 @@
 
 
 //MISC Combinations
-
         combo_STTG {
             timeout-ms = <75>;
             key-positions = <0 1 12 13 24 25>;
@@ -41,8 +40,8 @@
                        };
 
        combo_SECTSYMBOL {
-            timeout-ms = <40>;
-            key-positions = <10 11>;
+            timeout-ms = <50>;
+            key-positions = <11 23 35>;
             layers = <0 1>;
             bindings = <&kp RA(NUMBER_6)>;
                        }; 
@@ -53,28 +52,22 @@
             layers = <0 1>;
             bindings = <&kp CAPSLOCK>;
                        };
+
         combo_LShift {
-            timeout-ms = <50>;
-            key-positions = <25 26>;
+            timeout-ms = <40>;
+            key-positions = <24 25>;
             layers = <0 1>;
             bindings = <&kp LSHFT>;
                      };
+
         combo_RShift {
-            timeout-ms = <50>;
-            key-positions = <33 34>;
+            timeout-ms = <40>;
+            key-positions = <34 35>;
             layers = <0 1>;
             bindings = <&kp RSHFT>;
                      };
 
-        combo_WHISPERFLOW {
-            timeout-ms = <50>;
-            key-positions = <18 19>;
-            layers = <0 1>;
-            bindings = <&kp LA(LC(Z))>;
-                     };
-
 //LEFT MAC Combinations
-
         combo_WIN {
             timeout-ms = <75>;
             key-positions = <2 3 4 5>;
@@ -82,31 +75,31 @@
             bindings = <&tog 1>;
                        };
         combo_SYNMBPDleft {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <15 16>;
             layers = <0 1>;
             bindings = <&mo 2>;
                      };
        combo_medialeft{
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <13 14>;
             layers = <0 1>;
             bindings = <&mo 3>;
                      };
         combo_SCRNSHTmac {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <4 5>;
             layers = <0>;
             bindings = <&kp LG(LS(N4))>;
                      };
         combo_TXTSNPRmac {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <16 17>;
             layers = <0>;
             bindings = <&kp LG(LS(N2))>;
                      };
         combo_COPYPASTEmac {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <28 29>;
             layers = <0>;
             bindings = <&mt LG(V) LG(C)>;
@@ -117,13 +110,13 @@
 //LEFT LNX Combinations
 
         combo_TSKMNGRwin {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <4 5>;
             layers = <1>;
             bindings = <&kp LC(LA(DEL))>;
                      };
         combo_COPYPASTEwin {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <28 29>;
             layers = <1>;
             bindings = <&mt LC(V) LC(C)>;
@@ -132,39 +125,21 @@
 
 
 //RIGHT MAC Combinations
-
        combo_SYNMBPDright{
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <19 20>;
             layers = <0 1>;
             bindings = <&mo 2>;
                      };
 
        combo_mediaright{
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <21 22>;
             layers = <0 1>;
             bindings = <&mo 3>;
                      };
 
-        combo_FINDmac {
-            timeout-ms = <50>;
-            key-positions = <18 19>;
-            layers = <0>;
-            bindings = <&kp RG(F)>;
-                     };
-
-        combo_THINGSmac {
-            timeout-ms = <50>;
-            key-positions = <30 31>;
-            layers = <0>;
-            bindings = <&kp RC(SPACE)>;
-                     };
-
-
-
 //RIGHT LNX Combinations
-
         combo_TODOSwin {
             timeout-ms = <50>;
             key-positions = <30 31>;
@@ -173,9 +148,6 @@
                      };
            };
     };
-
-
-
 
 // Hold-tap behaviors
 &mt {
@@ -196,14 +168,14 @@ base_layer {
             // |LALT |Q (1)|W (2)|E (3)|R (4)|T (5)|   |Y (6)|U (7)|I (8)|O (9)|P (0)|MEGA`|
             // |LCMD |  A  |S (s)|  D  |F (f)|  G  |   |  H  |  J  |K (u)|  L  |' (;)| meh |
             // |LCTRL|  Z  |  X  |  C  |  V  |  B  |   |  N  |M (l)|, (d)|. (r)|/ (\)|LSCMD|
-            //                   | ESC |SPACE|BSPC |   | ENT | TAB | DEL |
+            //                   | DEL |SPACE|BSPC |   | ENT | TAB | ESC |
             //                                               
             
             bindings = <
   &kp LALT   &mt N1 Q  &mt N2 W         &mt N3 E  &mt  N4 R    &mt N5 T        &mt N6 Y   &mt N7 U      &mt N8 I        &mt N9 O       &mt N0 P       &mt LA(LG(LCTRL)) GRAVE  
-  &kp LCMD   &kp A     &mt LC(LA(S)) S  &kp D     &mt LG(F) F  &kp G           &kp H      &kp J         &mt UP K        &kp L          &mt SEMI SQT   &kp LA(LCTRL)
+  &kp LCMD   &kp A     &mt LC(LA(l)) S  &kp D     &mt LG(F) F  &kp G           &kp H      &kp J         &mt UP K        &kp L          &mt SEMI SQT   &kp LA(LCTRL)
   &kp LCTRL  &kp Z     &kp X            &kp C     &kp V        &kp B           &kp N      &mt LEFT M    &mt DOWN COMMA  &mt RIGHT DOT  &mt BSLH FSLH  &kp LS(LCMD)
-                                        &kp ESC  &kp SPACE    &kp BSPC         &kp ENTER  &kp TAB  &kp DEL
+                                        &kp DEL  &kp SPACE    &kp BSPC         &kp ENTER  &kp TAB  &kp ESC
             >;
         };
 
@@ -214,7 +186,7 @@ win_layer {
             // |LALT |Q (1)|W (2)|E (3)|R (4)|T (5)|   |Y (6)|U (7)|I (8)|O (9)|P (0)|MEGA`|
             // |LCTRL|  A  |  S  |  D  |F (f)|  G  |   |  H  |  J  |K (u)|  L  |' (;)| meh |
             // |LCMD |  Z  |  X  |  C  |  V  |  B  |   |  N  |M (l)|, (d)|. (r)|/ (\)|ShCtl|
-            //                   | ESC |SPACE|BSPC |   | ENT | TAB | DEL |
+            //                   | DEL |SPACE|BSPC |   | ENT | TAB | ESC |
             //                                               
             
             bindings = <
@@ -232,14 +204,14 @@ symnumpad_layer {
             // |     |  \  |  `  |  {  |  }  |  -  |   |  :  |  7  |  8  |  9  |  -  |  +  |
             // |     |  |  |  '  |  (  |  )  |  *  |   |  ;  |  4  |  5  |  6  |  *  |  =  |
             // |LSHFT|  /  |  "  |  [  |  ]  |  =  |   |  0  |  1  |  2  |  3  |     |RSHFT|
-            //                   |  <  |  >  |     |   |Shift|     |     |
+            //                   |  <  |  >  |  +  |   |Shift|     |     |
             //                                 
 
             bindings = <
 &none      &kp BSLH  &kp GRAVE  &kp LBRC   &kp RBRC  &kp MINUS           &kp COLON  &kp N7  &kp N8  &kp N9  &none  &none
 &none      &kp PIPE  &kp SQT    &kp LPAR   &kp RPAR  &kp STAR            &kp SEMI   &kp N4  &kp N5  &kp N6  &none  &none
 &kp LSHFT  &kp FSLH  &kp DQT    &kp LBKT   &kp RBKT  &kp EQUAL           &kp N0     &kp N1  &kp N2  &kp N3  &none  &kp RSHFT
-                                      &kp LT  &kp GT  &none           &kp RSHFT  &none  &none
+                                     &kp LT  &kp GT  &kp PLUS            &kp RSHFT  &none  &none
             >;
         };
 
