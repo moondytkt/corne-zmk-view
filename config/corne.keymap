@@ -55,14 +55,14 @@
 
         combo_LShift {
             timeout-ms = <40>;
-            key-positions = <24 25>;
+            key-positions = <25 26>;
             layers = <0 1>;
             bindings = <&kp LSHFT>;
                      };
 
         combo_RShift {
             timeout-ms = <40>;
-            key-positions = <34 35>;
+            key-positions = <33 34>;
             layers = <0 1>;
             bindings = <&kp RSHFT>;
                      };
